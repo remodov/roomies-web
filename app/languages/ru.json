@@ -1,12 +1,11 @@
 {
  "LOGIN_PAGE":{
-     "TITUL":"Log in",
-     "FORGOT_PASSWORD": "Forgot password?",
-     "LOGIN": "Log in",
-     "REGISTRATION": "Register"
+     "TITUL":"Вход",
+     "FORGOT_PASSWORD" : "Забыли пароль?",
+     "LOGIN": "Войти",
+     "REGISTRATION": "Регистрация"
   },
   
-   
   "Menu": {
     "DASHBOARD": "Dashboard",
     "MAIL": "Mail",

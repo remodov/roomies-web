@@ -1,0 +1,67 @@
+<div class="page page-core page-login">
+
+  <div class="text-center"><h3 class="text-light text-white">ROOMIES</h3></div>
+
+  <div class="container w-420 p-15 bg-white mt-40 text-center">
+
+
+    <h2 class="text-light text-greensea">{{ 'LOGIN_PAGE.TITUL' | translate }}</h2>
+
+    <form name="form" class="form-validation mt-20" novalidate>
+
+      <div class="form-group">
+        <input type="email" class="form-control underline-input" placeholder="Email" ng-model="user.email" required>
+      </div>
+
+      <div class="form-group">
+        <input type="password" placeholder="Password" class="form-control underline-input" ng-model="user.password" required>
+      </div>
+
+     <div class="form-group text-left mt-20">
+        <button type="submit" class="btn btn-greensea b-0 br-2 mr-5" ng-click="login()" ng-disabled='form.$invalid'>{{ 'LOGIN_PAGE.LOGIN' | translate }}</button>
+        <button type="button" class="btn btn-greensea b-0 br-2 mr-5" ng-click="createRequest()" >TEST HTTP</button>
+    
+    
+    
+    
+     <div class="dropdown inline-block" uib-dropdown> 
+        
+        <a href class="dropdown-toggle" uib-dropdown-toggle>
+          <img ng-show="currentLanguage == 'en'" class="wh30 w-60" src="images/flags/United-States-of-America.png" alt="">
+          <img ng-show="currentLanguage == 'ru'" class="wh30 w-60" src="images/flags/Russia.png" alt="">
+        </a>
+  
+        <ul class="dropdown-menu pull-right with-arrow animated littleFadeInDown" role="menu">
+  
+          <li ng-class="{active: currentLanguage == 'en'}">
+            <a href="javascript:;" ng-click="changeLanguage('en')">
+              <img src="images/flags/United-States-of-America.png" alt=""> English
+            </a>
+          </li>
+  
+          <li ng-class="{active: currentLanguage == 'ru'}">
+            <a href="javascript:;" ng-click="changeLanguage('ru')">
+              <img src="images/flags/Russia.png" alt=""> Russia
+            </a>
+          </li>
+  
+        </ul>
+        
+      </div>  
+    
+        <a ui-sref="core.forgotpass" class="pull-right mt-10">{{ 'LOGIN_PAGE.FORGOT_PASSWORD' | translate }}</a>
+      </div>
+     
+     
+
+    </form>
+
+    <div class="bg-slategray lt wrap-reset mt-40">
+      <p class="m-0">
+				<a ui-sref="core.signup" class="text-uppercase">{{ 'LOGIN_PAGE.REGISTRATION' | translate }}</a>
+			</p>
+    </div>
+
+  </div>
+
+</div>
